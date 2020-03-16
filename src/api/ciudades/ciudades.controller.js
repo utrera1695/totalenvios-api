@@ -28,8 +28,9 @@ router.get("/ciudad",
 router.get("/ciudad/pais",
   async (req, res) => {
     try {
-      let ciudad = await CiudadesController.FindCiudadByState()
-      res.status(200).send(ciudad)
+      let pais = req.query.pais
+      let estados = await CiudadesController.FindAllState(pais)
+      res.status(200).send(estados)
     } catch (error) {
       console.log(error)
       res.status(error.code || 500).send(error)
