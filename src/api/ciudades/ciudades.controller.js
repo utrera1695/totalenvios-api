@@ -1,5 +1,6 @@
 import express from "express";
 import CiudadesService from "./ciudades.service";
+import ciudadesService from "./ciudades.service";
 var router = express.Router();
 
 router.post("/ciudad",
@@ -29,7 +30,7 @@ router.get("/ciudad/pais",
   async (req, res) => {
     try {
       let pais = req.query.pais
-      let estados = await CiudadesController.FindAllState(pais)
+      let estados = await ciudadesService.FindAllState(pais)
       res.status(200).send(estados)
     } catch (error) {
       console.log(error)
