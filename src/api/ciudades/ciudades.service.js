@@ -24,7 +24,7 @@ const FindAllState = async (pais) => {
   let estados = ciudades.filter((a, b) => a.nombreEstadosDet !== b.nombreEstadosDet).map(a => {
     return a.nombreEstadosDet
   })
-  return estados
+  return estados.filter((a, index) => estados.indexOf(a) === index)
 }
 
 export default {
