@@ -24,6 +24,7 @@ const FindAllState = async (pais) => {
   var estados = ciudades.filter((a, b) => a.nombreEstadosDet !== b.nombreEstadosDet).map(a => {
     return a.nombreEstadosDet
   })
+  console.log(estados.indexOf('Miranda'))
   let x = estados.filter((v, i) => estados.indexOf(v) === i)
   return x
 }
