@@ -1,4 +1,4 @@
-import Seguro from './seguro.controller'
+import Seguro from './seguro.model'
 
 const SaveSeguro = async (body) => {
   return await Seguro.sync({
