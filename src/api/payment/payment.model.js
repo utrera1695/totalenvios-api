@@ -16,6 +16,9 @@ const Payment =
     percent: Sequelize.DOUBLE(11, 2),
     fecha_trans: {
       type: Sequelize.INTEGER(11)
+    },
+    tipo: {
+      type: Sequelize.INTEGER(11)
     }
   }, {
     timestamps: false,
