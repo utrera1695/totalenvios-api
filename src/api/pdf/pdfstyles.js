@@ -1,4 +1,4 @@
-export default styles =
+const styles =
   `<style>
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
@@ -175,4 +175,7 @@ table.resum td:first-child {
   font-weight: bold;
   text-decoration: none;
 }
-</style>`
+</style>`;
+export default {
+  styles
+}
