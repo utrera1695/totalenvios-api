@@ -15,7 +15,6 @@ const createPdf = async data => {
   <html lang="en">
 <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"></head>
 <body>
-  ${styles}
   <div class="container">
     <h4 class="brand"><div>Total</div>Envios</h4>
     <div class="card red">
