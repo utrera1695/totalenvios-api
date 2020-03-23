@@ -1,4 +1,6 @@
-import styles from './pdfstyles';
+import {
+  styles
+} from './pdfstyles';
 var options = {
   border: {
     top: '1in', // default is 0, units: mm, cm, in, px
