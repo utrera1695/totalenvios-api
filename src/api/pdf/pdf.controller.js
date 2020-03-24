@@ -5,8 +5,7 @@ import fs from 'fs-extra';
 import pdf from 'html-pdf';
 var router = express.Router();
 
-router.post(
-  '/pdf',
+router.post("/pdf",
   /* Guardar registro de pais */
   async (req, res) => {
     try {
