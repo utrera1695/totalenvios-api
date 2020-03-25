@@ -11,6 +11,15 @@ const Seguro =
       autoIncrement: true
     },
     percent: Sequelize.DOUBLE(11, 2),
+    bogotaImpuesto: {
+      type: DataTypes.TEXT,
+      get: function () {
+        return JSON.parse(this.getDataValue("bogotaImpuesto"));
+      },
+      set: function (value) {
+        return this.setDataValue("bogotaImpuesto", JSON.stringify(value));
+      }
+    },
     fecha_trans: {
       type: Sequelize.INTEGER(11)
     }
