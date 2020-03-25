@@ -5,8 +5,8 @@ import fs from 'fs-extra';
 import pdf from 'html-pdf';
 var router = express.Router();
 
-router.post("/downloadpdf",
-  /* Guardar registro de pais */
+/* router.post("/downloadpdf",
+   Guardar registro de pais 
   async (req, res) => {
     try {
       let content = await PdfService.createPdf(req.body);
@@ -15,6 +15,8 @@ router.post("/downloadpdf",
         .toFile(path.join(__dirname, '', ''), (err, response) => {
           if (!err) {
             res.sendFile(path.join(__dirname, '', ''));
+          } else {
+            res.status(500).send(err);
           }
         });
     } catch (error) {
@@ -22,7 +24,7 @@ router.post("/downloadpdf",
       res.status(error.code || 500).send(error);
     }
   }
-);
+); */
 router.get("/pdf",
   async (req, res) => {
     try {
