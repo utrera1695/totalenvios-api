@@ -17,7 +17,7 @@ router.post("/seguro",
       res.status(error.code || 500).send(error)
     }
   });
-router.post("/downloadpdf",
+router.post("/seguro/downloadpdf",
   /* Guardar registro de pais */
   async (req, res) => {
     try {
