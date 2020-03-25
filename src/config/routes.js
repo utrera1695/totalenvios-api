@@ -17,12 +17,5 @@ router.use('/api', ImagenController)
 router.use('/api', PaymentController)
 router.use('/api', SeguroController)
 router.use('/api', PdfController)
-router.use('/routes', () => {
-  return router;
-  let routes = router._router.stack // registered routes
-    .filter(r => r.route) // take out all the middleware
-    .map(r => r.route.path) // get all the paths
-  return routes
-})
 
 export default router;

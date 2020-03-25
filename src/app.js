@@ -33,5 +33,8 @@ app.use((req, res, next) => {
 
 // Routes
 app.use("/", routes);
-
+let routes = app._router.stack // registered routes
+    .filter(r => r.route) // take out all the middleware
+    .map(r => r.route.path) // get all the paths
+console.log(routes)
 export default app;
