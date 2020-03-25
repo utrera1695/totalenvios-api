@@ -23,5 +23,15 @@ router.post("/pdf",
     }
   }
 );
+router.get("/pdf",
+  async (req, res) => {
+    try {
+      res.status(200).send('bien');
+    } catch (error) {
+      console.log(error);
+      res.status(error.code || 500).send(error);
+    }
+  }
+)
 
 export default router;
