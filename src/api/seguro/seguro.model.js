@@ -12,7 +12,7 @@ const Seguro =
     },
     percent: Sequelize.DOUBLE(11, 2),
     bogotaImpuesto: {
-      type: DataTypes.TEXT,
+      type: Sequelize.TEXT,
       get: function () {
         return JSON.parse(this.getDataValue("bogotaImpuesto"));
       },
