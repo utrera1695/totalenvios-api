@@ -1,9 +1,8 @@
 import styles from './pdfstyles';
 var options = {
   border: {
-    top: '1in', // default is 0, units: mm, cm, in, px
+    // default is 0, units: mm, cm, in, px
     right: '1in',
-    bottom: '1in',
     left: '1in'
   },
   format: 'Letter'
@@ -20,7 +19,7 @@ const createPdf = async data => {
     color: #fc3c3d;"><div>Total</div>Envios</h4>
     <div class="card red">
       <div class="card-body">
-        <h5 class="title">Calculo estimado</h5>
+        <h5 class="title">Cálculo estimado</h5>
         <table class='price'>
           <tbody>
             <tr><td>Monto flete</td><td>$${data.montoflete}</td></tr>
@@ -35,8 +34,7 @@ const createPdf = async data => {
             <tr class='metodopago'>
               <td>
                 <label>Método de pago</label>
-                <p>
-                ${data.metodonombre} (${
+                <p>Cominsión ${data.metodonombre} (${
     data.metodotipo === 0 ? data.metodovalor + '%' : '$' + data.metodovalor
   })
                 </p>
@@ -100,11 +98,15 @@ const createPdf = async data => {
               <tr><td>Ciudad</td><td>${data.ciudad}</td></tr>
             </tbody>
           </table>
+          
           <div class="user_data"><label>Nombre y apellido</label><p>${
             data.nombre
           }</p></div>
           <div class="user_data"><label>Correo eléctronico</label><p>${
             data.correo
+          }</p></div>
+          <div class="user_data"><label>Empresa</label><p>${
+            data.empresa
           }</p></div>
         </div>
       </div>

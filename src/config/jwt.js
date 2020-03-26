@@ -4,7 +4,7 @@ import {
   encode
 } from "jwt-simple";
 import moment from "moment";
-const secret = "delivery202#%!utrera95";
+const secret = "tenvios202#%!utrera95";
 
 const createToken = (user) => {
   var payload = {

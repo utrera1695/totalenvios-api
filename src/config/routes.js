@@ -7,6 +7,8 @@ import ImagenController from '../api/images/images.controller'
 import PaymentController from '../api/payment/payment.controller'
 import SeguroController from '../api/seguro/seguro.controller'
 import PdfController from '../api/pdf/pdf.controller'
+import UserController from '../api/user/user.controller'
+import EmailController from '../api/email/email.controller'
 
 var router = express.Router();
 router.use('/api', PaisRouter)
@@ -17,4 +19,7 @@ router.use('/api', ImagenController)
 router.use('/api', PaymentController)
 router.use('/api', SeguroController)
 router.use('/api', PdfController)
+router.use('/api', UserController)
+router.use('/api', EmailController)
+
 export default router;
