@@ -29,6 +29,9 @@ label {
   color: #fc3c3d;
   display: flex;
   justify-content: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
 }
 
 .brand div {

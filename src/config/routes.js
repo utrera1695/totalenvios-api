@@ -17,5 +17,4 @@ router.use('/api', ImagenController)
 router.use('/api', PaymentController)
 router.use('/api', SeguroController)
 router.use('/api', PdfController)
-
 export default router;

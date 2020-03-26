@@ -15,16 +15,19 @@ const createPdf = async data => {
 <body>
   ${styles.styles}
   <div class="container">
-    <h4 class="brand"><div>Total</div>Envios</h4>
+    <h4 class="brand" style=" text-align: center;
+    margin-bottom: 20px;
+    color: #fc3c3d;"><div>Total</div>Envios</h4>
     <div class="card red">
       <div class="card-body">
         <h5 class="title">Calculo estimado</h5>
         <table class='price'>
           <tbody>
             <tr><td>Monto flete</td><td>$${data.montoflete}</td></tr>
-            <tr><td>Seguro (${data.valorseguro}}%) </td><td>$${
+            <tr><td>Seguro (${data.valorseguro}%) </td><td>$${
     data.seguro
   }</td></tr>
+  <tr><td>Impuesto (${data.valorimpuesto}%) </td><td>$${data.impuesto}</td></tr>
             <tr><td>Otros cargos</td><td>$${data.otroscargos}</td></tr>
             <tr class='totalmonto'><td>Total monto</td><td>$${
               data.totalmonto
@@ -34,7 +37,7 @@ const createPdf = async data => {
                 <label>Método de pago</label>
                 <p>
                 ${data.metodonombre} (${
-    data.metodotipo === 0 ? '$' + data.metodovalor : data.metodovalor + '%'
+    data.metodotipo === 0 ? data.metodovalor + '%' : '$' + data.metodovalor
   })
                 </p>
               </td>
@@ -51,14 +54,24 @@ const createPdf = async data => {
               <b>
                 ${
                   data.tiposistema
-                    ? data.ancho + 'cm x ' + data.alto + 'cm x ' + data.largo
-                    : data.ancho + 'in x ' + data.alto + 'cm x ' + data.largo
+                    ? data.ancho +
+                      'cm x ' +
+                      data.alto +
+                      'cm x ' +
+                      data.largo +
+                      'cm'
+                    : data.ancho +
+                      'in x ' +
+                      data.alto +
+                      'in x ' +
+                      data.largo +
+                      'in'
                 }
               </b>${
                 data.tipoenvio === 1
                   ? 'con un peso ' +
                     data.tipopeso +
-                    'de ' +
+                    ' de ' +
                     (data.tiposistema === 1
                       ? data.peso + 'kg'
                       : data.peso + 'in')
@@ -73,7 +86,9 @@ const createPdf = async data => {
       <div class="card-body">
         <div class="container total">
           <div class='totalpay'>
-            <label>tiempo estimado de entrega</label><h2>5 a 7 días habiles</h2>
+            <label>tiempo estimado de entrega</label><h2>${
+              data.tiempoentrega
+            }</h2>
           </div>
           <table class="resum">
             <tbody>
@@ -81,8 +96,8 @@ const createPdf = async data => {
                 data.tipoenvio === 1 ? 'Aéreo' : 'Marítimo'
               }</td></tr>
               <tr><td>País </td><td>${data.pais}</td></tr>
-              <tr><td>Estado</td><td>$${data.estado}</td></tr>
-              <tr><td>Ciudad</td>td>$${data.ciudad}</td></tr>
+              <tr><td>Estado</td><td>${data.estado}</td></tr>
+              <tr><td>Ciudad</td><td>${data.ciudad}</td></tr>
             </tbody>
           </table>
           <div class="user_data"><label>Nombre y apellido</label><p>${
