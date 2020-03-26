@@ -34,7 +34,7 @@ const Login = async body => {
 const Register = async data => {
   return await User.sync({
     force: false
-  }).then(e => {
+  }).then(async e => {
     let UserExist = await User.findOne({
       where: {
         email: data.email
@@ -43,7 +43,7 @@ const Register = async data => {
     console.log(UserExist);
     if (!UserExist) {
       data.password = bcrypt.hashSync(data.password, 10);
-      return await User.create(data);
+      return User.create(data);
     } else {
       throw {
         code: 400,
