@@ -11,8 +11,7 @@ const createToken = user => {
     sub: user.id_user,
     email: user.email,
     iat: moment().unix(),
-    exp: moment()
-      .add(30, 'days')
+    exp: moment().add(30, 'days')
       .unix()
   };
   return encode(payload, secret);
