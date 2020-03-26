@@ -102,7 +102,9 @@ tr.metodopago p {
   margin-top: 0;
   margin-bottom: 0;
 }
-
+tr.metodopago label {
+  font-size: 10px;
+}
 table.resum {
   background-color: white;
 
@@ -117,6 +119,7 @@ table.resum td {
   text-align: start;
   color: gray;
   font-weight: lighter;
+  font-size: 10px;
 }
 
 table.resum td:first-child {
@@ -145,7 +148,7 @@ table.resum td:first-child {
 }
 
 .totalpay p {
-  font-size: 12px;
+  font-size: 10px;
 }
 
 .user_data {
@@ -168,7 +171,7 @@ table.resum td:first-child {
 }
 
 .end {
-  font-size: 12px;
+  font-size: 10px;
   color: gray;
   text-align: center;
 }

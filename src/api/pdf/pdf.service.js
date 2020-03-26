@@ -34,7 +34,7 @@ const createPdf = async data => {
             <tr class='metodopago'>
               <td>
                 <label>Método de pago</label>
-                <p>Cominsión ${data.metodonombre} (${
+                <p>Comisión ${data.metodonombre} (${
     data.metodotipo === 0 ? data.metodovalor + '%' : '$' + data.metodovalor
   })
                 </p>
