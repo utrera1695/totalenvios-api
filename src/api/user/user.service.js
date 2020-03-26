@@ -32,25 +32,29 @@ const Login = async body => {
 };
 
 const Register = async data => {
-  let UserExist = User.findOne({
-    where: {
-      email: data.email
-    }
-  });
-  console.log(UserExist);
-  if (!UserExist) {
-    data.password = bcrypt.hashSync(data.password, 10);
-    return await User.sync({
-      force: false
-    }).then(e => {
-      return User.create(data);
+  return await User.sync({
+    force: false
+  })
+    .then(e => {
+      let UserExist = User.findOne({
+        where: {
+          email: data.email
+        }
+      });
+      console.log(UserExist);
+      if (!UserExist) {
+        data.password = bcrypt.hashSync(data.password, 10);
+        return User.create(data);
+      } else {
+        throw {
+          code: 400,
+          error: 'Ya existe un usuario con este email'
+        };
+      }
+    })
+    .cathc(e => {
+      throw e;
     });
-  } else {
-    throw {
-      code: 400,
-      error: 'Ya existe un usuario con este email'
-    };
-  }
 };
 
 export default {
