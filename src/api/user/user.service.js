@@ -4,11 +4,12 @@ import bcrypt from 'bcryptjs';
 import jwtCreate from '../../config/jwt';
 
 const Login = async body => {
-  let UserExist = User.findOne({
+  let UserExist = await User.findOne({
     where: {
       email: body.email
     }
   });
+  console.log(UserExist);
   if (UserExist) {
     const compareHash = bcrypt.compareSync(body.password, UserExist.password);
     if (compareHash) {
