@@ -6,7 +6,7 @@ import jwtCreate from '../../config/jwt';
 const Login = async body => {
   let UserExist = User.findOne({
     where: {
-      email: data.email
+      email: body.email
     }
   });
   if (UserExist) {
