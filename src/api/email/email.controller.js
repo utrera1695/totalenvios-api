@@ -33,7 +33,8 @@ router.post("/email/contact",
       }
 
     } catch (error) {
-      throw error
+      console.log(error)
+      res.status(error.code || 500).send(error)
     }
   });
 export default router;
