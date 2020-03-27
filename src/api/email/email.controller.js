@@ -16,8 +16,8 @@ router.post("/email/contact",
           rejectUnauthorized: false
         },
         auth: {
-          user: 'd410423ba98df8',
-          pass: '45e4ecbd86b2a6'
+          user: '7cac8acccc6fea',
+          pass: '981ab13468a203'
         }
       });
       let info = await tp.sendMail({
@@ -27,9 +27,11 @@ router.post("/email/contact",
         html: `${await contactTemplate.ContactTemplate(body)}`
       })
       if (info) {
-        return true
+        res.status(200).send(true)
+      } else {
+        res.status(200).send(false)
       }
-      res.status(200).send(req.file.filename)
+
     } catch (error) {
       throw error
     }
