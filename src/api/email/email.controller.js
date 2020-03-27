@@ -8,16 +8,16 @@ router.post("/email/contact",
     try {
       var body = req.body;
       var tp = nodemailer.createTransport({
-        host: 'guiamedicavenezuela.com',
-        port: '25',
+        host: 'smtp.mailtrap.io',
+        port: '2525',
         secure: false,
         tls: {
           // do not fail on invalid certs
           rejectUnauthorized: false
         },
         auth: {
-          user: 'contacto@guiamedicavenezuela.com',
-          pass: '3a9mYg6#'
+          user: 'd410423ba98df8',
+          pass: '45e4ecbd86b2a6'
         }
       });
       let info = await tp.sendMail({
