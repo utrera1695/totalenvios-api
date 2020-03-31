@@ -139,9 +139,9 @@ const createPdf = async data => {
       <div class="card-body">
         <div class="container total">
           <div class='totalpay'>
-            <label>tiempo estimado de entrega</label><h2>${
+            <label>tiempo estimado de entrega</label><h4>${
               data.tiempoentrega
-            }</h2>
+            }</h4>
           </div>
           <table class="resum">
             <tbody>

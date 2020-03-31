@@ -72,7 +72,7 @@ table tr {
 }
 
 table tr td {
-  font-size: 12px;
+  font-size: 8px;
   width: 100%;
   padding: 5px;
   font-weight: 600;
