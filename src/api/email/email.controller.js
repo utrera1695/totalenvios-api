@@ -8,21 +8,17 @@ router.post("/email/contact",
     try {
       var body = req.body;
       var tp = nodemailer.createTransport({
-        host: 'smtp.mailtrap.io',
-        port: '2525',
+        host: 'mail.totalenvios.com',
+        port: '465',
         secure: false,
         tls: {
           // do not fail on invalid certs
           rejectUnauthorized: false
-        },
-        auth: {
-          user: '7cac8acccc6fea',
-          pass: '981ab13468a203'
         }
       });
       let info = await tp.sendMail({
         from: body.email,
-        to: 'marlibyv@gmail.com',
+        to: 'info@totalenvios.com',
         subject: 'Contacto realizado por ' + body.nombre,
         html: `${await contactTemplate.ContactTemplate(body)}`
       })
