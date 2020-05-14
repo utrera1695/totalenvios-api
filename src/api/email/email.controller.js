@@ -9,12 +9,7 @@ router.post("/email/contact",
       var body = req.body;
       var tp = nodemailer.createTransport({
         host: 'mail.totalenvios.com',
-        port: '465',
-        secure: false,
-        tls: {
-          // do not fail on invalid certs
-          rejectUnauthorized: false
-        }
+        port: '465'
       });
       let info = await tp.sendMail({
         from: body.email,
