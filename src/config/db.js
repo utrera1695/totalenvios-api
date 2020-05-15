@@ -15,8 +15,9 @@ import Sequelize from 'sequelize';
     dialect: 'mysql'
   }
 ); */
-const sequelize = new Sequelize(
-  'mysql://n8c8mej60fvxk3ni:x3n3fobo4coinbb2@m7nj9dclezfq7ax1.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/ymshydcxmbhhme8a'
-);
+const sequelize = new('totalenv_bdtotalenvios', 'totalenv_api', 'gik&IMI1Y$oi', {
+  host: 'localhost:3306',
+  dialect: 'mysql'
+});
 
 export default sequelize
