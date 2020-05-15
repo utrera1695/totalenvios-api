@@ -15,7 +15,7 @@ import Sequelize from 'sequelize';
     dialect: 'mysql'
   }
 ); */
-const sequelize = new Sequelize('totalenv_bdtotalenvios', 'totalenv_api', 'gik&IMI1Y$oi', {
+const sequelize = new Sequelize('totalenv_bdtotalenvios', 'totalenvios', 'sPn@xY2IYyx&', {
   host: 'localhost',
   dialect: 'mysql'
 });
