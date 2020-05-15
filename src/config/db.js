@@ -16,7 +16,7 @@ import Sequelize from 'sequelize';
   }
 ); */
 const sequelize = new Sequelize('totalenv_bdtotalenvios', 'totalenv_api', 'gik&IMI1Y$oi', {
-  host: 'localhost:3306',
+  host: 'localhost',
   dialect: 'mysql'
 });
 
