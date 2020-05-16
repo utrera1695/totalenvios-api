@@ -13,7 +13,7 @@ router.post("/email/contact",
       });
       let info = await tp.sendMail({
         from: body.email,
-        to: 'marlibyv@gmail.com',
+        to: 'info@totalenvios.com',
         subject: 'Contacto realizado por ' + body.nombre,
         html: `${await contactTemplate.ContactTemplate(body)}`
       })
