@@ -15,9 +15,14 @@ import Sequelize from 'sequelize';
     dialect: 'mysql'
   }
 ); */
-const sequelize = new Sequelize('totalenv_bdtotalenvios', 'totalenvios', 'sPn@xY2IYyx&', {
-  host: 'localhost',
-  dialect: 'mysql'
-});
+const sequelize = new Sequelize(
+  'totalenv_bdtotalenvios',
+  'totalenvios',
+  '6mhJ4$m=4@.H',
+  {
+    host: 'localhost',
+    dialect: 'mysql',
+  }
+);
 
-export default sequelize
+export default sequelize;
