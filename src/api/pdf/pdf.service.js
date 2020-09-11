@@ -24,8 +24,8 @@ const createPdf = async data => {
       <div class="card-body">
         <h5 class="title">Cálculo estimado</h5>
         <table class='price'>
-          <tbody>
-            <tr><td>Monto flete</td><td>$${data.montoflete}</td></tr>
+          <tbody>${data.ismin?`<tr><td>Monto flete</td><td>$${data.totalnormal}</td></tr><tr><td>Total a pagar (por mínimo)</td><td>$${data.montoflete}</td></tr>`:`<tr><td>Monto flete</td><td>$${data.montoflete}</td></tr>`}
+            
             <tr><td>Seguro (${data.valorseguro}%) </td><td>$${
     data.seguro
   }</td></tr>
