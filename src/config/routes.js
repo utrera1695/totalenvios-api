@@ -9,6 +9,7 @@ import SeguroController from '../api/seguro/seguro.controller'
 import PdfController from '../api/pdf/pdf.controller'
 import UserController from '../api/user/user.controller'
 import EmailController from '../api/email/email.controller'
+import PriceminController from "../api/pricemin/pricemin.controller";
 
 var router = express.Router();
 router.use('/api', PaisRouter)
@@ -21,5 +22,6 @@ router.use('/api', SeguroController)
 router.use('/api', PdfController)
 router.use('/api', UserController)
 router.use('/api', EmailController)
+router.use('/api', PriceminController)
 
 export default router;
