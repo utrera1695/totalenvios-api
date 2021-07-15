@@ -123,7 +123,7 @@ const createPdf = async data => {
       </div>
     </div>
     <p class="end">info@totalenvios.com</p>
-    <p class="end">Tel. +1 (754) 236-2131 / +1 (305) 200-5481</p>
+    <p class="end">Tel. +1 (786) 710-4540 / +1 (305) 200-5481</p>
     <p class="end">10625 nw 122 st, Medley, Florida, Estados Unidos 33178</p>
   </div>
 </body>
