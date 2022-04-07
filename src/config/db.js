@@ -16,8 +16,8 @@ import Sequelize from 'sequelize';
   }
 ); */
 const sequelize = new Sequelize(
-  'totalenv_bdtotalenvios',
-  'totalenv_totalenvios',
+  'api_totaldb',
+  'api_totaldb',
   '6mhJ4$m=4@.H', {
     host: 'localhost',
     dialect: 'mysql',
