@@ -78,9 +78,9 @@ const createPdf = async data => {
               ${
                 data.tipoenvio === 1
                   ? ', con un peso volumetrico de ' +
-                    (Math.round(data.tiposistema
-                      ? (data.peso /2.205).toFixed(2) + 'kg'
-                      : data.peso.toFixed(2) + 'in'))
+                    (data.tiposistema
+                      ? Math.round((data.peso /2.205).toFixed(2)) + 'kg'
+                      : Math.round(data.peso.toFixed(2)) + 'in')
                   : ', de ' + data.piescubicos + 'pies cúbicos'
               }
             </p>
